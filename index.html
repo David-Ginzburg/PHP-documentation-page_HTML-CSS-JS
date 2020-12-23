@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav id="navbar">
+      <header><h1>PHP Documentation</h1></header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a>
+          <ul>
+            <li><a href="#know">What You Should Already Know</a></li>
+            <li><a href="#php_is">What is PHP?</a></li>
+            <li><a href="#php_do">What Can PHP Do?</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a>
+          <ul>
+            <li><a href="#creating">Creating (Declaring) Variables</a></li>
+            <li><a href="#variables">Variables</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="#Data_Types">Data Types</a>
+          <ul>
+            <li><a href="#string">String</a></li>
+            <li><a href="#integer">Integer</a></li>
+            <li><a href="#float">Float</a></li>
+            <li><a href="#boolean">Boolean</a></li>
+            <li><a href="#array">Array</a></li>
+            <li><a href="#null">NULL Value</a></li>
+            <li><a href="#resource">Resource</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="#if_else_elseif_Statements">if else elseif Statements</a>
+          <ul>
+            <li><a href="#conditional">Conditional</a></li>
+            <li><a href="#if">The if Statement</a></li>
+            <li><a href="#if_else">The if...else Statement</a></li>
+            <li><a href="#elseif">The if...elseif...else Statement</a></li>
+            <li><a href="#switch">The switch Statement</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="#In_development">In development</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    
+  <main id="main-doc">
+
+    <section class="main-section" id="Introduction">
+      <header><h2>Introduction</h2></header>
+      <h3 class='timer'></h3>
+      <h3 id="know">What You Should Already Know</h3>
+      <p>Before you continue you should have a basic understanding of the following:</p>
+      <p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </p>
+
+      <h3 id="php_is">What is PHP?</h3>
+      <p>
+        <ul>
+          <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
+          <li>PHP is a widely-used, open source scripting language</li>
+          <li>PHP scripts are executed on the server</li>
+          <li>PHP is free to download and use</li>
+        </ul>
+      </p>
+
+      <h3 id="php_do">What Can PHP Do?</h3>
+      <p>
+        <ul>
+          <li>PHP can generate dynamic page content</li>
+          <li>PHP can create, open, read, write, delete, and close files on the server</li>
+          <li>PHP can collect form data</li>
+          <li>PHP can send and receive cookies</li>
+          <li>PHP can add, delete, modify data in your database</li>
+          <li>PHP can be used to control user-access</li>
+          <li>PHP can encrypt data</li>
+        </ul>
+      </p>
+
+    </section>
+
+    <section class="main-section" id="Syntax">
+      <header><h2>Syntax</h2></header>
+      <p>A PHP script can be placed anywhere in the document.</p>
+      <p>A PHP script starts with <code>&lt;?php</code> and ends with <code>?&gt;</code>:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          // PHP code goes here
+          ?&gt;
+        </code>
+      </div>
+      <p>The default file extension for PHP files is "<code>.php</code>".</p>
+      <p>A PHP file normally contains HTML tags, and some PHP scripting code.</p>
+      <p>Below, we have an example of a simple PHP file, with a PHP script that uses a built-in PHP function "<code>echo</code>" to output the text "Hello World!" on a web page:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;body&gt;
+          
+          &lt;h1&gt;My first PHP page&lt;/h1&gt;
+          
+          &lt;?php
+          echo "Hello World!";
+          ?&gt;
+          
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </div>
+      <p><strong>Note:</strong> PHP statements end with a semicolon (<code>;</code>).</p>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header><h2>Variables</h2></header>
+      <p>Variables are "containers" for storing information.</p>
+      <h3 id="creating">Creating (Declaring) Variables</h3>
+      <p>In PHP, a variable starts with the <code>$</code> sign, followed by the name of the variable:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $txt = "Hello world!";
+          $x = 5;
+          $y = 10.5;
+          ?&gt;
+        </code>
+      </div>
+      <p>After the execution of the statements above, the variable <code>$txt</code> will hold the value <code>Hello world!</code>, the variable <code>$x</code> will hold the value <code>5</code>, and the variable <code>$y</code> will hold the value <code>10.5</code>.</p>
+      <p><strong>Note:</strong> When you assign a text value to a variable, put quotes around the value.</p>
+      <p><strong>Note:</strong> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</p>
+      <h3 id="variables">Variables</h3>
+      <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</p>
+      <p>Rules for PHP variables:</p>
+      <ul>
+        <li>A variable starts with the <code>$</code> sign, followed by the name of the variable</li>
+        <li>A variable name must start with a letter or the underscore character</li>
+        <li>A variable name cannot start with a number</li>
+        <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+        <li>Variable names are case-sensitive (<code>$age</code> and <code>$AGE</code> are two different variables)</li>
+      </ul>
+      <p><strong>Remember that PHP variable names are case-sensitive!</strong></p>
+    </section>
+
+    <section class="main-section" id="Data_Types">
+      <header><h2>Data Types</h2></header>
+      <p>Variables can store data of different types, and different data types can do different things.</p>
+      <p>PHP supports the following data types:</p>
+      <ul>
+        <li>String</li>
+        <li>Integer</li>
+        <li>Float (floating point numbers - also called double)</li>
+        <li>Boolean</li>
+        <li>Array</li>
+        <li>Object</li>
+        <li>NULL</li>
+        <li>Resource</li>
+      </ul>
+      <h3 id="string">String</h3>
+      <p>A string is a sequence of characters, like "Hello world!".</p>
+      <p>A string can be any text inside quotes. You can use single or double quotes:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $x = "Hello world!";
+          $y = 'Hello world!';
+
+          echo $x;
+          echo "";
+          echo $y;
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="integer">Integer</h3>
+      <p>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.</p>
+      <p>Rules for integers:</p>
+      <ul>
+        <li>An integer must have at least one digit</li>
+        <li>An integer must not have a decimal point</li>
+        <li>An integer can be either positive or negative</li>
+        <li>Integers can be specified in: decimal (base 10), hexadecimal (base 16), octal (base 8), or binary (base 2) notation</li>
+      </ul>
+      <p>In the following example <code>$x</code> is an integer. The PHP <code>var_dump()</code> function returns the data type and value:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $x = 5985;
+          var_dump($x);
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="float">Float</h3>
+      <p>A float (floating point number) is a number with a decimal point or a number in exponential form.</p>
+      <p>In the following example <code>$x</code> is a float. The PHP <code>var_dump()</code> function returns the data type and value:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $x = 10.365;
+          var_dump($x);
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="boolean">Boolean</h3>
+      <p>A Boolean represents two possible states: TRUE or FALSE.</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          $x = true;
+          $y = false;
+        </code>
+      </div>
+      <h3 id="array">Array</h3>
+      <p>An array stores multiple values in one single variable.</p>
+      <p>In the following example <code>$cars</code> is an array. The PHP <code>var_dump()</code> function returns the data type and value:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $cars = array("Volvo","BMW","Toyota");
+          var_dump($cars);
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="object">Object</h3>
+      <p>An object is a data type which stores data and information on how to process that data.
+      <p>In PHP, an object must be explicitly declared.</p>
+      <p>First we must declare a class of object. For this, we use the class keyword. A class is a structure that can contain properties and methods:</p>
+      </p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          class Car {
+            function Car() {
+              $this->model = "VW";
+            }
+          }
+          
+          // create an object
+          $herbie = new Car();
+          
+          // show object properties
+          echo $herbie->model;
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="null">NULL Value</h3>
+      <p>Null is a special data type which can have only one value: NULL.</p>
+      <p>A variable of data type NULL is a variable that has no value assigned to it.</p>
+      <p><strong>Tip:</strong> If a variable is created without a value, it is automatically assigned a value of NULL.</p>
+      <p>Variables can also be emptied by setting the value to NULL:</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $x = "Hello world!";
+          $x = null;
+          var_dump($x);
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="resource">Resource</h3>
+      <p>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.</p>
+      <p>A common example of using the resource data type is a database call.</p>
+    </section>
+
+    <section class="main-section" id="if_else_elseif_Statements">
+      <header><h2>If else elseif Statements</h2></header>
+      <h3 id="conditional">Conditional Statements</h3>
+      <p>Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.</p>
+      <p>In PHP we have the following conditional statements:</p>
+      <ul>
+        <li><code>if</code> statement - executes some code if one condition is true</li>
+        <li><code>if...else</code> statement - executes some code if a condition is true and another code if that condition is false</li>
+        <li><code>if...elseif...else</code> statement - executes different codes for more than two conditions</li>
+        <li><code>switch</code> statement - selects one of many blocks of code to be executed</li>
+      </ul>
+      <h3 id="if">The if Statement</h3>
+      <p>The if statement executes some code <code>if</code> one condition is true.</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $t = date("H");
+          
+          if ($t &lt; "20") {
+            echo "Have a good day!";
+          }
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="if_else">The if...else Statement</h3>
+      <p>The <code>if...else statement</code> executes some code if a condition is true and another code if that condition is false.</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $t = date("H");
+          
+          if ($t &lt; "20") {
+            echo "Have a good day!";
+          } else {
+            echo "Have a good night!";
+          }
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="elseif">The if...elseif...else Statement</h3>
+      <p>The <code>if...elseif...else</code> statement executes different codes for more than two conditions.</p>
+      <div class="codeSection">
+        <h4>Example:</h4>
+        <code>
+          &lt;?php
+          $t = date("H");
+          
+          if ($t &lt; "10") {
+            echo "Have a good morning!";
+          } elseif ($t &lt; "20") {
+            echo "Have a good day!";
+          } else {
+            echo "Have a good night!";
+          }
+          ?&gt;
+        </code>
+      </div>
+      <h3 id="switch">The switch Statement</h3>
+      <p>The <code>switch</code> statement will be explained in the next chapter.</p>
+    </section>
+
+    <section class="main-section" id="In_development">
+      <header><h2>In development</h2></header>
+      <p>There will be new information soon.</p>
+    </section>
+
+    <section class="main-section" id="Reference">
+      <header><h2>Reference</h2></header>
+      <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/php/">w3schools</a></p>
+    </section>
+
+  </main>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
